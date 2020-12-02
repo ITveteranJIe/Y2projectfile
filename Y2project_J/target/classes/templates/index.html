@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APP</title>
+    <link rel="stylesheet" th:href="@{./css/component.css}">
+    <link rel="stylesheet" th:href="@{./css/admin.css}">
+    <link rel="stylesheet" th:href="@{./css/font-awesome.min.css}">
+    <script th:src="@{./js/JQuery2.1.4.js}"></script>
+    <script th:src="@{./js/common.js}"></script>
+    <!-- 有需要静态页面代写 或者 设计网站页面的 加 QQ：951252660 -->
+    <!--  换肤背景色 https://webgradients.com/ -->
+</head>
+
+<body>
+    <div class="admin">
+        <!--top-->
+        <div th:replace="~{universalHtml/universal::jie}"></div>
+        <div class="body">
+            <div class="left">
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-home"></i> 站点仪表
+                    </div>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-navicon"></i> 栏目管理 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+
+                    <ul class="downmenu">
+                        <li><a th:href="@{/column_show}" target="rightiframe">栏目列表</a></li>
+                        <li><a th:href="@{/column_create}" target="rightiframe">创建栏目</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-file-powerpoint-o"></i> 文档管理 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+
+                    <ul class="downmenu">
+                        <li><a th:href="@{/article_show}" target="rightiframe">文档列表</a></li>
+                        <li><a th:href="@{/article_create}" target="rightiframe">创建文档</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->                
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-image"></i> 图片管理 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+
+                    <ul class="downmenu">
+                        <li><a th:href="@{image_show}" target="rightiframe">图片列表</a></li>
+                        <li><a th:href="@{image_create}" target="rightiframe">创建图片</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->                
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-image"></i> 单页管理 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+
+                    <ul class="downmenu">
+                        <li><a th:href="@{/page_show}" target="rightiframe">单页列表</a></li>
+                        <li><a th:href="@{/page_create}" target="rightiframe">创建单页</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                        <i class="fa fa-fw fa-cog"></i> 网站设置 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+                    <ul class="downmenu">
+                        <li><a th:href="@{/web_baseset}" target="rightiframe">基础设置</a></li>
+                        <li><a th:href="@{/web_baseseo}" target="rightiframe">SEO设置</a></li>
+                        <li><a th:href="@{/web_basemap}" target="rightiframe">地图定位</a></li>
+                        <li><a th:href="@{/web_basefield}" target="rightiframe">公司信息</a></li>
+                        <li><a th:href="@{/web_email}" target="rightiframe">邮箱设置</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                        <i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+                    <ul class="downmenu">
+                        <li><a th:href="@{/user_show}" target="rightiframe">用户列表</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                        <i class="fa fa-fw fa-link"></i> 友情链接 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+                    <ul class="downmenu">
+                        <li><a href="links_show.html" target="rightiframe">链接列表</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                        <i class="fa fa-fw fa-newspaper-o"></i> 网站日志 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+                    <ul class="downmenu">
+                        <li><a href="web_logs.html" target="rightiframe">日志列表</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 分割线 -->
+            <div class="right">
+                <iframe src="column_create.html" frameborder="0" id="rightiframe" name="rightiframe"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
