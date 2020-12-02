@@ -1,7 +1,8 @@
 package com.jie.mapper;
+import com.jie.pojo.Projectdata.userList;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-
+import java.util.List;
 /**
  * ♥--?
  * ♥O Copyright (C) JIe
@@ -12,4 +13,6 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface JieMapper {
+   /**userTableSelect【Disco Fox Classics】*/
+   List<userList> selectAll();
 }

@@ -1,7 +1,6 @@
 package com.jie.controller.accesspathController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 /**
  * ♥--?
  * ♥O Copyright (C) JIe
