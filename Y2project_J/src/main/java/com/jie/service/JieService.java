@@ -1,5 +1,8 @@
 package com.jie.service;
 
+import com.jie.pojo.Pagingentity;
+import com.jie.pojo.Projectdata.userList;
+
 /**
  * ♥--?
  * ♥O Copyright (C) JIe
@@ -8,4 +11,6 @@ package com.jie.service;
  * -♥---J
  */
 public interface JieService {
+    /**userListPagingSelectAll*/
+    Pagingentity<userList>  selectUserAll(Integer page ,Integer rows);
 }
