@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
  * ♥--J Jie   2020/12/221:49     Service实现类 增肌      JieServiceimpl
  * -♥---J
  */
-@Service
 public class JieServiceimpl {
 
 }

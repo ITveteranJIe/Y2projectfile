@@ -7,6 +7,8 @@ import com.jie.pojo.Projectdata.userList;
 import com.jie.service.JieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 import java.util.List;
 /**
  * ♥--?
@@ -17,8 +19,9 @@ import java.util.List;
  */
 @Service
 public class JieServicePagingimpl implements JieService {
+    @Resource
     @Autowired
-    private  JieMapper  jieMapper;
+    public JieMapper  jieMapper;
     /**
      * UserListFunction
      * @param page
@@ -28,7 +31,7 @@ public class JieServicePagingimpl implements JieService {
     @Override
     public Pagingentity<userList> selectUserAll(Integer page, Integer rows) {
         Page pages = PageHelper.startPage(page, rows);
-        List<userList> userLists = jieMapper.USER_LISTS();
+        List<userList> userLists = jieMapper.uSER_LISTS();
         System.out.println(userLists);
         Pagingentity<userList>  pagingUser=new Pagingentity<userList>();
         pagingUser.setRows(userLists);
