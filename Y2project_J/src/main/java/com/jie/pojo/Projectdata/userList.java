@@ -25,4 +25,12 @@ public class userList {
     private String  creationTime;
     private String  loginTime;
     private Integer state;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }

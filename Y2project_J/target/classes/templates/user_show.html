@@ -13,7 +13,9 @@
 
     <!-- 富文本编辑器 -->
     <script th:src="@{./js/wang.js}"></script>
-
+    <link rel="stylesheet" th:href="@{https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css}">
+    <script th:src="@{https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js}"></script>
+    <script th:src="@{https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 </head>
 
 <body>
@@ -51,15 +53,15 @@
                         <th>状态</th>
                         <th>操作</th>
                     </tr>
-                    <tr>
-                        <td>admin</td>
-                        <td>文卓熊</td>
-                        <td>赵文卓</td>
-                        <td>22</td>
-                        <td>192.168.1.1</td>
-                        <td>2019-10-29 11:05:05</td>
-                        <td>2019-10-29 11:05:05</td>
-                        <td>正常</td>
+                    <tr th:each="jie:${page.rows}">
+                        <td th:text="${jie.getUserName()}"></td>
+<!--                        <td th:text="${jie.get}">文卓熊</td>-->
+<!--                        <td th:text="${jie.get}">赵文卓</td>-->
+<!--                        <td th:text="${jie.get}">22</td>-->
+<!--                        <td th:text="${jie.get}">192.168.1.1</td>-->
+<!--                        <td th:text="${jie.get}">2019-10-29 11:05:05</td>-->
+<!--                        <td th:text="${jie.get}">2019-10-29 11:05:05</td>-->
+<!--                        <td th:text="${jie.get}">正常</td>-->
                         <td>
                             <a href="" class="ios-edit-btn">编辑</a>
                             <a href="" class="ios-del-btn">删除</a>
@@ -70,7 +72,17 @@
             <div>
                 <span class="ios-button ios-button-blue ios-button-2x" id="createUSer">创建用户</span>
             </div>
-
+            <div>
+                <ul class="pagination pagination-sm">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="./js/common.js"></script>
