@@ -18,7 +18,7 @@ import java.util.List;
 @Service
 public class JieServicePagingimpl implements JieService {
     @Autowired
-    private JieMapper  jieMapper;
+     JieMapper  jieMapper;
     /**
      * UserListFunction
      * @param page
