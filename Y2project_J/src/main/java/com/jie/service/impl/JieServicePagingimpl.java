@@ -18,7 +18,7 @@ import java.util.List;
 @Service
 public class JieServicePagingimpl implements JieService {
     @Autowired
-     JieMapper  jieMapper;
+    private  JieMapper  jieMapper;
     /**
      * UserListFunction
      * @param page
@@ -28,7 +28,8 @@ public class JieServicePagingimpl implements JieService {
     @Override
     public Pagingentity<userList> selectUserAll(Integer page, Integer rows) {
         Page pages = PageHelper.startPage(page, rows);
-        List<userList> userLists = jieMapper.selectAll();
+        List<userList> userLists = jieMapper.USER_LISTS();
+        System.out.println(userLists);
         Pagingentity<userList>  pagingUser=new Pagingentity<userList>();
         pagingUser.setRows(userLists);
         pagingUser.setTotal(pages.getTotal());

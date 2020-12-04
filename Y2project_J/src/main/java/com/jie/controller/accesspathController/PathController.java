@@ -103,7 +103,7 @@ public class PathController {
      * 用户列表
      */
     @RequestMapping("/user_show")
-    String user_show(){
+    public String user_show(){
         return "user_show";
     }
 }

@@ -12,5 +12,5 @@ import com.jie.pojo.Projectdata.userList;
  */
 public interface JieService {
     /**userListPagingSelectAll*/
-    Pagingentity<userList>  selectUserAll(Integer page ,Integer rows);
+  public Pagingentity<userList>  selectUserAll(Integer page ,Integer rows);
 }

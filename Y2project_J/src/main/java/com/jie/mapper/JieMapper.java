@@ -14,5 +14,5 @@ import java.util.List;
 @Repository
 public interface JieMapper {
    /**userTableSelect【Disco Fox Classics】*/
-   List<userList> selectAll();
+   List<userList> USER_LISTS();
 }
