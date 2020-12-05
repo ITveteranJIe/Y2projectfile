@@ -1,7 +1,5 @@
 package com.jie.pojo.Projectdata;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.apache.ibatis.type.Alias;
 
 /**
@@ -14,6 +12,8 @@ import org.apache.ibatis.type.Alias;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Alias("userList")
 public class userList {
     private Integer uid;
@@ -26,11 +26,4 @@ public class userList {
     private String  loginTime;
     private Integer state;
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }
